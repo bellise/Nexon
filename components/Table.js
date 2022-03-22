@@ -80,14 +80,21 @@ const columns = [
     sortDirections: ['descend'],
   },
   {
-    title: 'Age',
-    dataIndex: 'age',
+    title: 'Card',
+    dataIndex: 'card',
     defaultSortOrder: 'descend',
-    sorter: (a, b) => a.age - b.age,
+    sorter: (a, b) => a.card - b.card,
+  },
+  
+  {
+    title: 'Type',
+    dataIndex: 'type',
+    defaultSortOrder: 'descend',
+    sorter: (a, b) => a.type - b.type,
   },
   {
-    title: 'Address',
-    dataIndex: 'address',
+    title: 'Location',
+    dataIndex: 'location',
     filters: [
       {
         text: 'London',
@@ -98,7 +105,7 @@ const columns = [
         value: 'New York',
       },
     ],
-    onFilter: (value, record) => record.address.indexOf(value) === 0,
+    onFilter: (value, record) => record.location.indexOf(value) === 0,
   },
 ];
 
@@ -106,31 +113,60 @@ const data = [
   {
     key: '1',
     name: 'John Brown',
-    age: 32,
-    address: 'New York No. 1 Lake Park',
-    department:'Health'
+    card: 32,
+    location: 'New York No. 1 Lake Park',
+    department:'Health',
+    type:'physical'
   },
   {
     key: '2',
     name: 'Jim Green',
-    age: 42,
-    address: 'London No. 1 Lake Park',
-    department:'Health'
+    card: 42,
+    location: 'London No. 1 Lake Park',
+    department:'Health',
+    type:'physical'
   },
   {
     key: '3',
     name: 'Joe Black',
-    age: 32,
-    address: 'Sidney No. 1 Lake Park',
-    department:'Health'
+    card: 32,
+    location: 'Sidney No. 1 Lake Park',
+    department:'Health',
+    type:'physical'
   },
   {
     key: '4',
     name: 'Jim Red',
-    age: 32,
-    address: 'London No. 2 Lake Park',
-    department:'Health'
+    card: 32,
+    location: 'London No. 2 Lake Park',
+    department:'Health',
+    type:'physical'
   },
+  {
+    key: '3',
+    name: 'Joe Black',
+    card: 32,
+    location: 'Sidney No. 1 Lake Park',
+    department:'Health',
+    type:'physical'
+  },
+  {
+    key: '3',
+    name: 'Joe Black',
+    card: 32,
+    location: 'Sidney No. 1 Lake Park',
+    department:'Health',
+    type:'physical'
+  },
+  {
+    key: '3',
+    name: 'Joe Black',
+    card: 32,
+    location: 'Sidney No. 1 Lake Park',
+    department:'Health',
+    type:'physical'
+  },
+
 ];
 
 function onChange(pagination, filters, sorter, extra) {

@@ -91,7 +91,7 @@ const App = () => {
         Selected Date: {date ? date.format('YYYY-MM-DD') : 'None'}
       </div> */}
       <Row>
-    <Col span={18} push={8}>
+    <Col span={18} push={5}>
       <Table/>
     </Col>
     <Col span={6} pull={17}>
