@@ -10,8 +10,8 @@ const getData = () => [
     department: "Optimization",
     status: "Active",
     role: "Admin",
-    imgUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+    imgUrl:"/public/pic1"
+      
   },
   {
     name: "Cody Fisher",
@@ -93,7 +93,7 @@ function App() {
   return (
     <>
       <h1>Hello React!</h1>
-      <div className='padding'>
+      <div>
         <Table columns={columns} data={data} />
       </div>
     </>

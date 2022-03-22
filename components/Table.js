@@ -12,7 +12,7 @@ function Table({ columns, data }) {
 
   // Rendering the UI for  table
   return (
-    <table {...getTableProps()} border="0.5" cellSpacing={20} cellPadding={25} style={{ paddingLeft:50 }}>
+    <table {...getTableProps()} border="0.5" cellSpacing={22} cellPadding={28} style={{ paddingLeft:50 }}>
       <thead>
         {headerGroups.map((headerGroup) => (
           <tr {...headerGroup.getHeaderGroupProps()}>
