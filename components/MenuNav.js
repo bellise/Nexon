@@ -1,28 +1,31 @@
 import { Menu } from 'antd';
 import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+import { DragHandle } from '@material-ui/icons';
 
 
 const { SubMenu } = Menu;
 
 const MenuNav = () => {
-  // handleClick = e => {
-  //   console.log('click ', e);
-  // };
+  // handleClick(e) {
+  //   e.preventDefault();
+  //   console.log("The link was clicked");
+  // }
 
     return (
       <Menu
         // onClick={this.handleClick}
-        style={{ width: 256 ,height: 600, }}
+        style={{ width: 256 ,height: 600}}
         defaultSelectedKeys={['1']}
         defaultOpenKeys={['sub1']}
         mode="inline"
       >
-        <SubMenu key="sub1" icon={<MailOutlined />} title="Nexon">
+        <SubMenu key="sub1" icon={<AppstoreOutlined/> } title="Nexon"style={{color:'black',}}>
           <Menu.ItemGroup key="g1" title="">
-            <Menu.Item key="1" icon={<MailOutlined />} >Transactions</Menu.Item>
+            <Menu.Item key="1" icon={<MailOutlined />}  style={{color:'black'}}>Transactions</Menu.Item>
             <Menu.Item key="2" icon={<MailOutlined />} >Make Deposit</Menu.Item>
             <Menu.Item key="3"icon={<MailOutlined />} >Withdraw Funds</Menu.Item>
             <Menu.Item key="4" icon={<MailOutlined />} >Send Money</Menu.Item>
+            <Menu.Item key="4" icon={<SettingOutlined />} >Settings</Menu.Item>
           </Menu.ItemGroup>
           {/* <Menu.ItemGroup key="g2" title="Item 2">
             <Menu.Item key="3">Option 3</Menu.Item>

@@ -7,11 +7,12 @@ import 'antd/dist/antd.css';
 import { Row, Col } from 'antd';
 import { AudioOutlined } from '@ant-design/icons';
 import { Input } from "antd";
+import { Button } from 'antd';
 
 
 const getData = () => [
   {
-    Avatar:"/pic1.jpg",
+    image:"/pic1.jpg",
     name: "Jane Cooper",
      email: "jane.cooper@example.com",
     card: "96313",
@@ -84,7 +85,7 @@ function App() {
       {
 
         Header:"Image",
-        accessor:"Image",
+        accessor:"image",
       },
       {
         Header: "Holder",
@@ -165,14 +166,21 @@ const suffix = (
 );
 
 const onSearch = value => console.log(value);
+function handleMenuClick(e) {
+  console.log('click', e);
+}
 
 
   return (
     <>
    
     <Row>
-    <Col span={18} push={8}style={{fontSize:30, marginTop:25,fontSmooth:'bold'}}>
-    <Search placeholder="Cards search" onSearch={onSearch} style={{ width: 200 }} />
+    <Col span={18} push={8}style={{fontSize:30, marginTop:25,fontSmooth:'bold',flexDirection:'row'}}>
+    <div style={{color:'black',justifyItems:'center',alignItems:'center'}}>
+     <Search placeholder="Cards search" onSearch={onSearch} style={{ width: 200 }} />
+    <Button style= 
+    {{backgroundColor:'light grey'}} onClick={onSearch}>New Card</Button>
+    </div>
     </Col>
 
     <Col span={6} pull={17}>
