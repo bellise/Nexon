@@ -92,6 +92,12 @@ const columns = [
     defaultSortOrder: 'descend',
     sorter: (a, b) => a.type - b.type,
   },
+
+  {
+    title: 'Balance',
+    dataIndex: 'balance',
+  },
+ 
   {
     title: 'Location',
     dataIndex: 'location',
@@ -107,6 +113,14 @@ const columns = [
     ],
     onFilter: (value, record) => record.location.indexOf(value) === 0,
   },
+
+  {
+    title: 'Limit',
+    dataIndex: 'limit',
+    defaultSortOrder: 'descend',
+    sorter: (a, b) => a.type - b.type,
+  },
+ 
 ];
 
 const data = [
@@ -116,7 +130,9 @@ const data = [
     card: 32,
     location: 'New York No. 1 Lake Park',
     department:'Health',
-    type:'physical'
+    type:'physical',
+    balance:'$200.3',
+    limit:'$100'
   },
   {
     key: '2',
@@ -124,7 +140,9 @@ const data = [
     card: 42,
     location: 'London No. 1 Lake Park',
     department:'Health',
-    type:'physical'
+    type:'physical',
+    balance:'$200.3',
+    limit:'$100'
   },
   {
     key: '3',
@@ -132,7 +150,9 @@ const data = [
     card: 32,
     location: 'Sidney No. 1 Lake Park',
     department:'Health',
-    type:'physical'
+    type:'physical',
+    balance:'$200.3',
+    limit:'$100'
   },
   {
     key: '4',
@@ -140,7 +160,9 @@ const data = [
     card: 32,
     location: 'London No. 2 Lake Park',
     department:'Health',
-    type:'physical'
+    type:'physical',
+    balance:'$200.3',
+    limit:'$100'
   },
   {
     key: '3',
@@ -148,23 +170,20 @@ const data = [
     card: 32,
     location: 'Sidney No. 1 Lake Park',
     department:'Health',
-    type:'physical'
+    type:'physical',
+    balance:'$200.3',
+    limit:'$100'
   },
+  
   {
     key: '3',
     name: 'Joe Black',
     card: 32,
     location: 'Sidney No. 1 Lake Park',
     department:'Health',
-    type:'physical'
-  },
-  {
-    key: '3',
-    name: 'Joe Black',
-    card: 32,
-    location: 'Sidney No. 1 Lake Park',
-    department:'Health',
-    type:'physical'
+    type:'physical',
+    balance:'$200.3',
+    limit:'$100'
   },
 
 ];
