@@ -12,17 +12,17 @@ const MenuNav = () => {
     return (
       <Menu
         // onClick={this.handleClick}
-        style={{ width: 256 }}
+        style={{ width: 256 ,height: 600, }}
         defaultSelectedKeys={['1']}
         defaultOpenKeys={['sub1']}
         mode="inline"
       >
-        <SubMenu key="sub1" icon={<MailOutlined />} title="Navigation One" style={{color:'red'}}>
-          <Menu.ItemGroup key="g1" title="Item 1" style={{color:'purple'}}>
-            <Menu.Item key="1">Transactions</Menu.Item>
-            <Menu.Item key="2">Make Deposit</Menu.Item>
-            <Menu.Item key="3">Withdraw Funds</Menu.Item>
-            <Menu.Item key="4">Send Money</Menu.Item>
+        <SubMenu key="sub1" icon={<MailOutlined />} title="Nexon">
+          <Menu.ItemGroup key="g1" title="">
+            <Menu.Item key="1" icon={<MailOutlined />} >Transactions</Menu.Item>
+            <Menu.Item key="2" icon={<MailOutlined />} >Make Deposit</Menu.Item>
+            <Menu.Item key="3"icon={<MailOutlined />} >Withdraw Funds</Menu.Item>
+            <Menu.Item key="4" icon={<MailOutlined />} >Send Money</Menu.Item>
           </Menu.ItemGroup>
           {/* <Menu.ItemGroup key="g2" title="Item 2">
             <Menu.Item key="3">Option 3</Menu.Item>
